@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyKhoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id_Customer" />
+    </Key>
+    <Property Name="Id_Customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName_Customer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address_Customer" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone_Customer" Type="nvarchar" MaxLength="20" />
+    <Property Name="MoreInfo_Customer" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContractDate_Customer" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Input">
+    <Key>
+      <PropertyRef Name="Id_Input" />
+    </Key>
+    <Property Name="Id_Input" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Date_Input" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InputInfo">
+    <Key>
+      <PropertyRef Name="Id_InputInfo" />
+    </Key>
+    <Property Name="Id_InputInfo" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Id_Object" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Id_Input" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Price_Input" Type="float" />
+    <Property Name="Price_Output" Type="float" />
+    <Property Name="Status_InputInfo" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Objects">
+    <Key>
+      <PropertyRef Name="Id_Object" />
+    </Key>
+    <Property Name="Id_Object" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="DisplayName_Customer" Type="nvarchar" MaxLength="100" />
+    <Property Name="Id_Unit" Type="int" Nullable="false" />
+    <Property Name="Id_Suplier" Type="int" Nullable="false" />
+    <Property Name="QRCode" Type="nvarchar" MaxLength="300" />
+    <Property Name="BarCode" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Output">
+    <Key>
+      <PropertyRef Name="Id_Output" />
+    </Key>
+    <Property Name="Id_Output" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Date_Ouput" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OutputInfo">
+    <Key>
+      <PropertyRef Name="Id_OutputInfo" />
+    </Key>
+    <Property Name="Id_OutputInfo" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Id_Object" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Id_Output" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Id_Customer" Type="int" Nullable="false" />
+    <Property Name="Count" Type="int" />
+    <Property Name="Price_Input" Type="float" />
+    <Property Name="Price_Output" Type="float" />
+    <Property Name="Status_OutputInfo" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Suplier">
+    <Key>
+      <PropertyRef Name="Id_Suplier" />
+    </Key>
+    <Property Name="Id_Suplier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName_Suplier" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address_Suplier" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone_Suplier" Type="nvarchar" MaxLength="20" />
+    <Property Name="MoreInfo_Suplier" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContractDate_Suplier" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="Id_Unit" />
+    </Key>
+    <Property Name="Id_Unit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName_Unit" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id_UserRole" />
+    </Key>
+    <Property Name="Id_UserRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName_UserRole" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id_Users" />
+    </Key>
+    <Property Name="Id_Users" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisplayName_Users" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" />
+    <Property Name="Id_UserRole" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__InputInfo__Id_In__4AB81AF0">
+    <End Role="Input" Type="Self.Input" Multiplicity="1" />
+    <End Role="InputInfo" Type="Self.InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Input">
+        <PropertyRef Name="Id_Input" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="Id_Input" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InputInfo__Statu__49C3F6B7">
+    <End Role="Objects" Type="Self.Objects" Multiplicity="1" />
+    <End Role="InputInfo" Type="Self.InputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="Id_Object" />
+      </Principal>
+      <Dependent Role="InputInfo">
+        <PropertyRef Name="Id_Object" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objects__BarCode__3D5E1FD2">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="1" />
+    <End Role="Objects" Type="Self.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id_Unit" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="Id_Unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Objects__Id_Supl__3E52440B">
+    <End Role="Suplier" Type="Self.Suplier" Multiplicity="1" />
+    <End Role="Objects" Type="Self.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suplier">
+        <PropertyRef Name="Id_Suplier" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="Id_Suplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OutputInf__Id_Cu__534D60F1">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="OutputInfo" Type="Self.OutputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id_Customer" />
+      </Principal>
+      <Dependent Role="OutputInfo">
+        <PropertyRef Name="Id_Customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OutputInf__Id_Ou__52593CB8">
+    <End Role="Output" Type="Self.Output" Multiplicity="1" />
+    <End Role="OutputInfo" Type="Self.OutputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Output">
+        <PropertyRef Name="Id_Output" />
+      </Principal>
+      <Dependent Role="OutputInfo">
+        <PropertyRef Name="Id_Output" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OutputInf__Statu__5165187F">
+    <End Role="Objects" Type="Self.Objects" Multiplicity="1" />
+    <End Role="OutputInfo" Type="Self.OutputInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="Id_Object" />
+      </Principal>
+      <Dependent Role="OutputInfo">
+        <PropertyRef Name="Id_Object" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__Id_UserRo__4316F928">
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="Id_UserRole" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Id_UserRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyKhoModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Input" EntityType="Self.Input" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InputInfo" EntityType="Self.InputInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Objects" EntityType="Self.Objects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Output" EntityType="Self.Output" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OutputInfo" EntityType="Self.OutputInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suplier" EntityType="Self.Suplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Unit" EntityType="Self.Unit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__InputInfo__Id_In__4AB81AF0" Association="Self.FK__InputInfo__Id_In__4AB81AF0">
+      <End Role="Input" EntitySet="Input" />
+      <End Role="InputInfo" EntitySet="InputInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InputInfo__Statu__49C3F6B7" Association="Self.FK__InputInfo__Statu__49C3F6B7">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="InputInfo" EntitySet="InputInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objects__BarCode__3D5E1FD2" Association="Self.FK__Objects__BarCode__3D5E1FD2">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Objects__Id_Supl__3E52440B" Association="Self.FK__Objects__Id_Supl__3E52440B">
+      <End Role="Suplier" EntitySet="Suplier" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OutputInf__Id_Cu__534D60F1" Association="Self.FK__OutputInf__Id_Cu__534D60F1">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="OutputInfo" EntitySet="OutputInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OutputInf__Id_Ou__52593CB8" Association="Self.FK__OutputInf__Id_Ou__52593CB8">
+      <End Role="Output" EntitySet="Output" />
+      <End Role="OutputInfo" EntitySet="OutputInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OutputInf__Statu__5165187F" Association="Self.FK__OutputInf__Statu__5165187F">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="OutputInfo" EntitySet="OutputInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__Id_UserRo__4316F928" Association="Self.FK__Users__Id_UserRo__4316F928">
+      <End Role="UserRole" EntitySet="UserRole" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
