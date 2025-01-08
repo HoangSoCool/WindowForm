@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|c:\\users\\asus\\documents\\zalo received files\\project\\quanlykho\\quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\viewmodel\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CustomerWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\CustomerWindow.xaml",
               "RelativeDocumentMoniker": "QuanLyKho\\CustomerWindow.xaml",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainResource.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ResourceXAML\\MainResource.xaml",
               "RelativeDocumentMoniker": "QuanLyKho\\ResourceXAML\\MainResource.xaml",
@@ -99,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\Model\\Customer.cs",
               "RelativeDocumentMoniker": "QuanLyKho\\Model\\Customer.cs",
