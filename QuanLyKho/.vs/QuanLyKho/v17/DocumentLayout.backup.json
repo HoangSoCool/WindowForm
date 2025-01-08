@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|c:\\users\\asus\\documents\\zalo received files\\project\\quanlykho\\quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|c:\\users\\asus\\documents\\zalo received files\\project\\quanlykho\\quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -70,8 +70,7 @@
               "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\CustomerWindow.xaml",
               "RelativeToolTip": "QuanLyKho\\CustomerWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-07T16:59:25.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T16:59:25.275Z"
             },
             {
               "$type": "Document",
