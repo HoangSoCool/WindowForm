@@ -11,8 +11,9 @@ namespace QuanLyKho.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Input
+    using QuanLyKho.ViewModel;
+
+    public partial class Input : BaseViewModel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Input()
@@ -20,9 +21,12 @@ namespace QuanLyKho.Model
             this.InputInfoes = new HashSet<InputInfo>();
         }
     
-        public string Id_Input { get; set; }
-        public Nullable<System.DateTime> Date_Input { get; set; }
-    
+        private string _Id_Input;
+        public string Id_Input { get => _Id_Input; set { _Id_Input = value; OnPropertyChanged(); } }
+
+        private DateTime? _Date_Input;
+        public DateTime? Date_Input { get => _Date_Input; set { _Date_Input = value; OnPropertyChanged(); } }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InputInfo> InputInfoes { get; set; }
     }

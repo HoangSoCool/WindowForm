@@ -94,6 +94,24 @@ namespace QuanLyKho.ViewModel
                 DataProvider.Ins.DB.SaveChanges();
                 SelectedItem.DisplayName_Suplier = DisplayName;
             });
+
+            DeleteCommand = new RelayCommand<object>((p) =>
+            {
+                // Kiểm tra xem có nhà cung cấp nào được chọn không
+                return SelectedItem != null;
+            }, (p) =>
+            {
+                // Xóa nhà cung cấp khỏi cơ sở dữ liệu
+                var suplierToDelete = DataProvider.Ins.DB.Supliers.Where(x => x.Id_Suplier == SelectedItem.Id_Suplier).SingleOrDefault();
+                if (suplierToDelete != null)
+                {
+                    DataProvider.Ins.DB.Supliers.Remove(suplierToDelete);
+                    DataProvider.Ins.DB.SaveChanges();
+
+                    // Cập nhật lại danh sách nhà cung cấp
+                    List.Remove(suplierToDelete);
+                }
+            });
         }
     }
 }

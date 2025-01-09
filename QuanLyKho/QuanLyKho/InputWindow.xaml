@@ -21,6 +21,7 @@
         WindowStartupLocation="CenterScreen"
         x:Name="Window"
         
+        DataContext="{StaticResource InputVM}"
         Title="Nhập kho" Height="500" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -46,9 +47,9 @@
             <!--DS các thông tin-->
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <WrapPanel>
-                    <TextBox Text="{Binding Display_NameObject, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên vật tư"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <DatePicker SelectedDate="{Binding DateInput}" Width="100" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Ngày nhập" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                    <TextBox Text="{Binding Count_Input, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Số lượng nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <TextBox x:Name="txtDisplayName" Text="{Binding SelectedItem_Object.DisplayName_Object, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên vật tư"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <DatePicker x:Name="datePicker" SelectedDate="{Binding SelectedItem_Input.Date_Input, UpdateSourceTrigger=PropertyChanged}" Width="100" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Ngày nhập" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                    <TextBox Text="{Binding Count , UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Số lượng nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     <TextBox Text="{Binding Price_Input, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Giá nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     <TextBox Text="{Binding Price_Output, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Giá xuất"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                     <TextBox Text="{Binding Status_Input, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Trạng thái nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -64,20 +65,19 @@
             </materialDesign:Card>
 
             <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
-                <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem,  Mode=OneWayToSource}">
+                <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Vật tư" DisplayMemberBinding="{Binding Object.DiscplayName_Object}"></GridViewColumn>
+                            <GridViewColumn Header="Vật tư" DisplayMemberBinding="{Binding Object.DisplayName_Object}"></GridViewColumn>
                             <GridViewColumn Header="Ngày nhập" DisplayMemberBinding="{Binding Input.Date_Input}"></GridViewColumn>
-                            <GridViewColumn Header="Số lượng nhập" DisplayMemberBinding="{Binding Count_Input}"></GridViewColumn>
+                            <GridViewColumn Header="Số lượng nhập" DisplayMemberBinding="{Binding Count}"></GridViewColumn>
                             <GridViewColumn Header="Giá nhập" DisplayMemberBinding="{Binding Price_Input}"></GridViewColumn>
                             <GridViewColumn Header="Giá xuất" DisplayMemberBinding="{Binding Price_Output}"></GridViewColumn>
-                            <GridViewColumn Header="Trạng thái nhập" DisplayMemberBinding="{Binding Status_Input}"></GridViewColumn>
+                            <GridViewColumn Header="Trạng thái nhập" DisplayMemberBinding="{Binding Status_InputInfo}"></GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </materialDesign:Card>
-
         </Grid>
     </Grid>
 </Window>

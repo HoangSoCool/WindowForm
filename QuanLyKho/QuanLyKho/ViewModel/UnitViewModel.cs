@@ -73,7 +73,31 @@ namespace QuanLyKho.ViewModel
                 DataProvider.Ins.DB.SaveChanges();
                 SelectedItem.DisplayName_Unit = DisplayName;
             });
-        }
 
+            DeleteCommand = new RelayCommand<object>((p) =>
+            {
+                return SelectedItem != null; // Kiểm tra nếu có item được chọn
+            }, (p) =>
+            {
+                if (SelectedItem != null)
+                {
+                    var unitToDelete = DataProvider.Ins.DB.Units.SingleOrDefault(x => x.Id_Unit == SelectedItem.Id_Unit);
+                    if (unitToDelete != null)
+                    {
+                        // Xóa khỏi cơ sở dữ liệu
+                        DataProvider.Ins.DB.Units.Remove(unitToDelete);
+                        DataProvider.Ins.DB.SaveChanges();
+
+                        // Xóa khỏi ObservableCollection
+                        List.Remove(SelectedItem);
+
+                        // Hủy chọn item sau khi xóa
+                        SelectedItem = null;
+                    }
+                }
+            });
+        }
+            
+            
     }
 }

@@ -91,6 +91,25 @@ namespace QuanLyKho.ViewModel
                 DataProvider.Ins.DB.SaveChanges();
                 SelectedItem.DisplayName_Customer = DisplayName;
             });
+
+            // Command Xóa
+            DeleteCommand = new RelayCommand<object>((p) =>
+            {
+                // Kiểm tra xem có khách hàng nào được chọn không
+                return SelectedItem != null;
+            }, (p) =>
+            {
+                // Xóa khách hàng khỏi cơ sở dữ liệu
+                var customerToDelete = DataProvider.Ins.DB.Customers.Where(x => x.Id_Customer == SelectedItem.Id_Customer).SingleOrDefault();
+                if (customerToDelete != null)
+                {
+                    DataProvider.Ins.DB.Customers.Remove(customerToDelete);
+                    DataProvider.Ins.DB.SaveChanges();
+
+                    // Cập nhật lại danh sách khách hàng
+                    List.Remove(customerToDelete);
+                }
+            });
         }
     }
 }

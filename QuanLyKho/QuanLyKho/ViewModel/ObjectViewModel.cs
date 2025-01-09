@@ -107,7 +107,22 @@ namespace QuanLyKho.ViewModel
                 Object.QRCode = QRCode;
                 Object.BarCode = BarCode;
                 DataProvider.Ins.DB.SaveChanges();
-                SelectedItem.DisplayName_Object = DisplayName;
+            });
+            // Lệnh Xóa
+            DeleteCommand = new RelayCommand<object>((p) =>
+            {
+                return SelectedItem != null; // Kiểm tra nếu có đối tượng được chọn
+            }, (p) =>
+            {
+                var objectToDelete = DataProvider.Ins.DB.Objects.SingleOrDefault(x => x.Id_Object == SelectedItem.Id_Object);
+                if (objectToDelete != null)
+                {
+                    DataProvider.Ins.DB.Objects.Remove(objectToDelete); // Xóa khỏi cơ sở dữ liệu
+                    DataProvider.Ins.DB.SaveChanges();
+
+                    List.Remove(SelectedItem); // Xóa khỏi ObservableCollection
+                    SelectedItem = null; // Hủy chọn
+                }
             });
         }
     }

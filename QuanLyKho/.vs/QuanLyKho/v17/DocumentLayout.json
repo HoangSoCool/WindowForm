@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|c:\\users\\asus\\documents\\zalo received files\\project\\quanlykho\\quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\resourcexaml\\mainresource.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|c:\\users\\asus\\documents\\zalo received files\\project\\quanlykho\\quanlykho\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\customerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\viewmodel\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\viewmodel\\customerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\viewmodel\\suplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\viewmodel\\suplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\model\\suplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\model\\suplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\quanlykho\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E208C9-B7CC-4AE1-80D6-4576911591C5}|QuanLyKho\\QuanLyKho.csproj|solutionrelative:quanlykho\\viewmodel\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,19 +21,6 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "QuanLyKho\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\MainViewModel.cs",
-              "RelativeToolTip": "QuanLyKho\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAmwEwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T02:51:00.181Z",
-              "IsPinned": true
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
@@ -62,75 +29,32 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomerWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\CustomerWindow.xaml",
-              "RelativeDocumentMoniker": "QuanLyKho\\CustomerWindow.xaml",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\CustomerWindow.xaml",
-              "RelativeToolTip": "QuanLyKho\\CustomerWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-07T16:59:25.275Z"
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "QuanLyKho\\ViewModel\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\UserViewModel.cs",
+              "RelativeToolTip": "QuanLyKho\\ViewModel\\UserViewModel.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAowI8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T16:17:20.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainResource.xaml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ResourceXAML\\MainResource.xaml",
-              "RelativeDocumentMoniker": "QuanLyKho\\ResourceXAML\\MainResource.xaml",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ResourceXAML\\MainResource.xaml",
-              "RelativeToolTip": "QuanLyKho\\ResourceXAML\\MainResource.xaml",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuanLyKho\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\MainWindow.xaml",
+              "RelativeToolTip": "QuanLyKho\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-07T16:58:43.256Z",
+              "WhenOpened": "2025-01-09T16:14:07.425Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\CustomerViewModel.cs",
-              "RelativeDocumentMoniker": "QuanLyKho\\ViewModel\\CustomerViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\CustomerViewModel.cs",
-              "RelativeToolTip": "QuanLyKho\\ViewModel\\CustomerViewModel.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T16:57:26.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\Model\\Customer.cs",
-              "RelativeDocumentMoniker": "QuanLyKho\\Model\\Customer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\Model\\Customer.cs",
-              "RelativeToolTip": "QuanLyKho\\Model\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T16:56:12.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SuplierViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\SuplierViewModel.cs",
-              "RelativeDocumentMoniker": "QuanLyKho\\ViewModel\\SuplierViewModel.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\ViewModel\\SuplierViewModel.cs",
-              "RelativeToolTip": "QuanLyKho\\ViewModel\\SuplierViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T15:40:20.618Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Suplier.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\Model\\Suplier.cs",
-              "RelativeDocumentMoniker": "QuanLyKho\\Model\\Suplier.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Zalo Received Files\\Project\\QuanLyKho\\QuanLyKho\\Model\\Suplier.cs",
-              "RelativeToolTip": "QuanLyKho\\Model\\Suplier.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAB8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T16:13:46.201Z"
             }
           ]
         }

@@ -14,7 +14,6 @@ using MaterialDesignThemes.Wpf.Converters;
 using MaterialDesignThemes.Wpf.Transitions;
 using QuanLyKho;
 using QuanLyKho.UserControls;
-using QuanLyKho.ViewModel;
 using System;
 using System.Diagnostics;
 using System.Windows;

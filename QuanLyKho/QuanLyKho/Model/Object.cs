@@ -24,6 +24,7 @@ namespace QuanLyKho.Model
 
         private string _Id_Object;
         public string Id_Object { get => _Id_Object; set { _Id_Object = value; OnPropertyChanged(); } }
+
         private string _DisplayName_Object;
         public string DisplayName_Object { get => _DisplayName_Object; set { _DisplayName_Object = value; OnPropertyChanged(); } }
 
@@ -44,6 +45,9 @@ namespace QuanLyKho.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InputInfo> InputInfoes { get; set; }
+
+        //private InputInfo _InputInfo;
+        //public virtual InputInfo InputInfo { get => _InputInfo; set { _InputInfo = value; OnPropertyChanged(); } }
 
         private Unit _Unit;
         public virtual Unit Unit { get => _Unit; set { _Unit = value; OnPropertyChanged(); } }

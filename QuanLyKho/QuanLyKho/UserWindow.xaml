@@ -21,6 +21,7 @@
         WindowStartupLocation="CenterScreen"
         x:Name="Window"
         
+        DataContext="{StaticResource UserVM}"
         Title="Người dùng" Height="500" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -46,8 +47,8 @@
             <!--DS các thông tin-->
             <materialDesign:Card Grid.Row="0" Margin="5">
                 <WrapPanel>
-                    <TextBox Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên đăng nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                    <ComboBox Margin="5 5 15 5" ItemsSource="{Binding Role}" SelectedItem="{Binding SelectedRole, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Quyền truy cập" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
+                    <TextBox Text="{Binding Name_User, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên đăng nhập"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <ComboBox Margin="5 5 15 5" DisplayMemberPath="DisplayName_UserRole" ItemsSource="{Binding UserRole}" SelectedItem="{Binding SelectedItem_UserRole, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" materialDesign:HintAssist.Hint="Quyền truy cập" IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}"></ComboBox>
                     <TextBox Text="{Binding DisplayName_User, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên hiển thị"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 </WrapPanel>
             </materialDesign:Card>
@@ -65,10 +66,10 @@
                 <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem,  Mode=OneWayToSource}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Mã User" DisplayMemberBinding="{Binding Id_User}"></GridViewColumn>
+                            <GridViewColumn Header="Mã User" DisplayMemberBinding="{Binding Id_Users}"></GridViewColumn>
                             <GridViewColumn Header="Tên đăng nhập" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
-                            <GridViewColumn Header="Quyền truy cập" DisplayMemberBinding="{Binding Role.DisplayName_Role}"></GridViewColumn>
-                            <GridViewColumn Header="Tên hiển thị" DisplayMemberBinding="{Binding DisplayName_User}"></GridViewColumn>
+                            <GridViewColumn Header="Quyền truy cập" DisplayMemberBinding="{Binding UserRole.DisplayName_UserRole}"></GridViewColumn>
+                            <GridViewColumn Header="Tên hiển thị" DisplayMemberBinding="{Binding DisplayName_Users}"></GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>

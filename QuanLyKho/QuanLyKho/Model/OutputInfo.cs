@@ -11,18 +11,38 @@ namespace QuanLyKho.Model
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class OutputInfo
+    using QuanLyKho.ViewModel;
+
+    public partial class OutputInfo : BaseViewModel
     {
-        public string Id_OutputInfo { get; set; }
-        public string Id_Object { get; set; }
-        public string Id_Output { get; set; }
-        public int Id_Customer { get; set; }
-        public Nullable<int> Count { get; set; }
-        public string Status_OutputInfo { get; set; }
-    
-        public virtual Customer Customer { get; set; }
-        public virtual Object Object { get; set; }
-        public virtual Output Output { get; set; }
+        //public string Id_OutputInfo { get; set; }'
+        private string _Id_OutputInfo;
+        public string Id_OutputInfo { get => _Id_OutputInfo; set { _Id_OutputInfo = value; OnPropertyChanged(); } }
+        //public string Id_Object { get; set; }
+        private string _Id_Object;
+        public string Id_Object { get => _Id_Object; set { _Id_Object = value; OnPropertyChanged(); } }
+        //public string Id_Output { get; set; }
+        private string _Id_Output;
+        public string Id_Output { get => _Id_Output; set { _Id_Output = value; OnPropertyChanged(); } }
+        //public int Id_Customer { get; set; }
+        private int _Id_Customer;
+        public int Id_Customer { get => _Id_Customer; set { _Id_Customer = value; OnPropertyChanged(); } }
+        //public Nullable<int> Count { get; set; }
+        private int? _Count;
+        public int? Count { get => _Count; set { _Count = value; OnPropertyChanged(); } }
+
+        //public string Status_OutputInfo { get; set; }
+        private string _Status_OutputInfo;
+        public string Status_OutputInfo { get => _Status_OutputInfo; set { _Status_OutputInfo = value; OnPropertyChanged(); } }
+
+        private Customer _Customer;
+        public virtual Customer Customer { get => _Customer; set { _Customer = value; OnPropertyChanged(); } }
+        //public virtual Customer Customer { get; set; }
+        private Object _Object;
+        public virtual Object Object { get => _Object; set { _Object = value; OnPropertyChanged(); } }
+        //public virtual Object Object { get; set; }
+        //public virtual Output Output { get; set; }
+        private Output _Output;
+        public virtual Output Output { get => _Output; set { _Output = value; OnPropertyChanged(); } }
     }
 }

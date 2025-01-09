@@ -7,21 +7,22 @@
         mc:Ignorable="d"
         
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-         xmlns:uc="clr-namespace:QuanLyKho.UserControls"
+        xmlns:uc="clr-namespace:QuanLyKho.UserControls"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-     TextElement.FontWeight="Regular"
-     TextElement.FontSize="13"
-     TextOptions.TextFormattingMode="Ideal"
-     TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"   
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"   
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         
         Name="mainWindow"
         DataContext="{StaticResource MainVM}"
+        
         Title="Phần Mềm Quản Lý Kho" Height="700" Width="640">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -211,7 +212,7 @@
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0">
+                                <Grid Grid.Column="0" Margin="15">
                                     <DatePicker
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
@@ -219,7 +220,7 @@
                                     materialDesign:HintAssist.Hint="Ngày bắt đầu"
                                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                                 </Grid>
-                                <Grid Grid.Column="1">
+                                <Grid Grid.Column="1" Margin="15">
                                     <DatePicker
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
@@ -227,7 +228,7 @@
                                     materialDesign:HintAssist.Hint="Ngày kết thúc"
                                     Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                                 </Grid>
-                                <Grid Grid.Column="2">
+                                <Grid Grid.Column="2" >
                                     <Button
                                     Margin="5"
                                     Style="{StaticResource MaterialDesignRaisedButton}"
@@ -248,32 +249,30 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0">
                                     <materialDesign:Card Margin="5"
-          Background="#03a9f4"
-          Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-          Padding="0"
-          Width="200">
-                                        <Grid>
+                                      Background="#03a9f4"
+                                      Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                                      Padding="0"
+                                      Width="200">      
+                                        <Grid >
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                                 <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
                                             <TextBlock
-              Text="Lượng Nhập"
-              Grid.Row="0"
-              Margin="16 16 16 4">
+                                              Text="Lượng Nhập"
+                                              Grid.Row="0"
+                                              Margin="16 16 16 4">      
                                             </TextBlock>
                                             <Separator
-              Grid.Row="1"
-              Style="{StaticResource MaterialDesignLightSeparator}" />
+                  Grid.Row="1"
+                  Style="{StaticResource MaterialDesignLightSeparator}" />
                                             <TextBlock
-              Grid.Row="2"
-              Margin="16 0 16 8"
-              VerticalAlignment="Center"
-              HorizontalAlignment="Left"
-              Text="100"
-              Style="{StaticResource MaterialDesignBody2TextBlock}">
-                                            </TextBlock>
+              Grid.Row="1"
+              Margin="16,20,-63,0"
+              VerticalAlignment="Top"
+              Text="{Binding TotalInput}"
+              Style="{StaticResource MaterialDesignBody2TextBlock}" Grid.RowSpan="2"/>
 
 
                                             <materialDesign:PopupBox
@@ -315,7 +314,7 @@
               Margin="16 0 16 8"
               VerticalAlignment="Center"
               HorizontalAlignment="Left"
-              Text="100"
+              Text="{Binding TotalOutput}"
               Style="{StaticResource MaterialDesignBody2TextBlock}">
                                             </TextBlock>
 
@@ -359,7 +358,7 @@
               Margin="16 0 16 8"
               VerticalAlignment="Center"
               HorizontalAlignment="Left"
-              Text="100"
+              Text="{Binding Total}"
               Style="{StaticResource MaterialDesignBody2TextBlock}">
                                             </TextBlock>
 
@@ -387,19 +386,24 @@
                 <!--list-->
                 <materialDesign:Card Grid.Row="1" Margin="5" VerticalAlignment="Stretch">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="453*"/>
+                            <ColumnDefinition Width="22*"/>
+                            <ColumnDefinition Width="155*"/>
+                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0" Margin="5">
+                        <Grid Grid.Row="0" Margin="5,5,5,5" Grid.ColumnSpan="3">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                                 <ColumnDefinition Width="auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0">
+                            <Grid Grid.Column="0" Margin="15">
                                 <DatePicker
         VerticalAlignment="Center"
         HorizontalAlignment="Left"
@@ -407,8 +411,8 @@
         materialDesign:HintAssist.Hint="Ngày bắt đầu"
         Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
                             </Grid>
-                            <Grid Grid.Column="1">
-                                <DatePicker
+                            <Grid Grid.Column="1" Margin="15">
+                                <DatePicker 
         VerticalAlignment="Center"
         HorizontalAlignment="Left"
         Width="100"
@@ -426,16 +430,16 @@ ToolTip="Resource name: MaterialDesignRaisedButton">
                             </Grid>
                         </Grid>
 
-                        <Grid Grid.Row="1">
+                        <Grid Grid.Row="1" Grid.ColumnSpan="3">
                             <Separator></Separator>
                         </Grid>
-                        <Grid Grid.Row="2">
+                        <Grid Grid.Row="2" Grid.ColumnSpan="3">
                             <ListView ItemsSource="{Binding InventoryList}">
                                 <ListView.View>
                                     <GridView>
                                         <GridViewColumn Header="STT" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
                                         <GridViewColumn Header="Tên Vật Tư" DisplayMemberBinding="{Binding Object.DisplayName_Object}"></GridViewColumn>
-                                        <GridViewColumn Header="Số Lượng Tồn" DisplayMemberBinding="{Binding Amount}"></GridViewColumn>
+                                        <GridViewColumn Header="Số Lượng Tồn" x:Name="txtSLT" DisplayMemberBinding="{Binding Amount}"></GridViewColumn>
                                     </GridView>
                                 </ListView.View>
                             </ListView>

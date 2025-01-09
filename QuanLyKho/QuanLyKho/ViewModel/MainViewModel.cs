@@ -15,6 +15,40 @@ namespace QuanLyKho.ViewModel
         private ObservableCollection<Inventory> _InventoryList;
         public ObservableCollection<Inventory> InventoryList { get => _InventoryList; set { _InventoryList = value; OnPropertyChanged(); } }
 
+        private int _total;
+        public int Total
+        {
+            get => _total;
+            set
+            {
+                _total = value;
+                OnPropertyChanged(nameof(Total));
+            }
+        }
+
+        private int _totalInput;
+        public int TotalInput
+        {
+            get => _totalInput;
+            set
+            {
+                _totalInput = value;
+                OnPropertyChanged(nameof(TotalInput));
+            }
+        }
+
+        private int _totalOutput;
+        public int TotalOutput
+        {
+            get => _totalOutput;
+            set
+            {
+                _totalOutput = value;
+                OnPropertyChanged(nameof(TotalOutput));
+            }
+        }
+
+
         public bool Isloaded = false;
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand UnitCommand { get; set; }
@@ -28,7 +62,8 @@ namespace QuanLyKho.ViewModel
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
         {
-            LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) => {
+            LoadedWindowCommand = new RelayCommand<Window>((p) => { return true; }, (p) =>
+            {
                 Isloaded = true;
                 if (p == null)
                     return;
@@ -68,6 +103,9 @@ namespace QuanLyKho.ViewModel
             var objectList = DataProvider.Ins.DB.Objects;
 
             int i = 1;
+            Total = 0; // Reset total trước khi tính
+            TotalOutput = 0;
+            TotalInput = 0;
             foreach (var item in objectList)
             {
                 var inputList = DataProvider.Ins.DB.InputInfoes.Where(p => p.Id_Object == item.Id_Object);
@@ -90,11 +128,19 @@ namespace QuanLyKho.ViewModel
                 Inventory.Amount = sumInput - sumOutput;
                 Inventory.Object = item;
 
+
+                TotalInput += sumInput; // Cộng dồn giá trị nhập
+                TotalOutput += sumOutput; // Cộng dồn giá trị xuất
+                Total += Inventory.Amount; // Cộng dồn giá trị Amount
                 InventoryList.Add(Inventory);
 
                 i++;
             }
 
+            void SumTotal()
+            {
+
+            }
         }
     }
 }

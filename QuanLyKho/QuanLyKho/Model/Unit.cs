@@ -21,7 +21,8 @@ namespace QuanLyKho.Model
             this.Objects = new HashSet<Object>();
         }
 
-        public int Id_Unit { get; set; }
+        private int _Id_Unit;
+        public int Id_Unit { get => _Id_Unit; set { _Id_Unit = value; OnPropertyChanged(); } }
         private string _DisplayName_Unit;
         public string DisplayName_Unit { get => _DisplayName_Unit; set { _DisplayName_Unit = value; OnPropertyChanged(); } }
     

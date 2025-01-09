@@ -23,5 +23,6 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
+
     }
 }
